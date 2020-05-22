@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Autocomplete</h1>
+    <form>
+      <label for="autocomplete-input" id="autocomplete-label"
+        >Type a name of your favorite color</label
+      >
+      <div
+        class="autocomplete__container"
+        role="combobox"
+        aria-labelledby="autocomplete-label"
+      >
+        <input
+          role="textbox"
+          aria-expanded="false"
+          aria-controls="autocomplete-results"
+          id="autocomplete-input"
+          class="autocomplete__input"
+        />
+        <button
+          aria-label="toggle dropdown"
+          class="autocomplete__dropdown-arrow"
+        >
+          <svg width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
+            <title>Open drop down</title>
+            <path d="M10 0L5 5 0 0z"></path>
+          </svg>
+        </button>
+        <ul
+          role="listbox"
+          id="autocomplete-results"
+          class="autocomplete__results"
+        ></ul>
+      </div>
+    </form>
+  </body>
+  <script src="index.js"></script>
+</html>
